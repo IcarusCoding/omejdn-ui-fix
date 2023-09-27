@@ -31,6 +31,7 @@ export class AppComponent {
         issuer: this.settings.get().oidcIssuer,
         redirectUri: window.location.origin,
         postLogoutRedirectUri: window.location.origin,
+        strictDiscoveryDocumentValidation: false,
         clientId: this.settings.get().clientId,
         responseType: 'code',
         scope: 'openid omejdn:read omejdn:write omejdn:admin',
