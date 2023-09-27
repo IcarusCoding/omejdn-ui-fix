@@ -68,6 +68,9 @@ export class ConfigComponent implements OnInit {
   }
 
   getPlugins(type) {
+    if (!this.config.plugins) {
+      return Object.keys({});
+    }
     return Object.keys(this.config.plugins[type] || {});
   }
 
